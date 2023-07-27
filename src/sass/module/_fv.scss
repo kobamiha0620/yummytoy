@@ -1,0 +1,50 @@
+@use "./variable"as var;
+
+.fv {
+    width: 100%;
+    background-color: var.$blue;
+    padding: 0;
+    font-size: 0;
+    img{
+        width: 100%;
+        height: auto;
+    }
+    @media screen and (max-width: var.$spbp) {
+
+    }
+}
+.fv02 {
+    width: 100%;
+    background-color: var.$blk;
+    padding: 0;
+    font-size: 0;
+    img{
+        width: 100%;
+        height: auto;
+    }
+    @media screen and (max-width: var.$spbp) {
+
+    }
+}
+
+.main{
+    width: 100%;
+    background-color: var.$blk;
+    padding: 0;
+    font-size: 0;
+    img{
+        width: 100%;
+        height: auto;
+    }
+    &__entry{
+        padding: 40px;
+        margin: 0 auto;
+        a{
+            display: block;
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+    }
+}
+// @include var.webpBg('.footer__anotherlogo', var.$imgpath+'another_logo', 'png');

@@ -1,0 +1,153 @@
+ <%
+// 以下の設定値を記入のこと
+
+var pageinit = {
+ttl : 'クレイツpresents TGC 北九州 2023' ,
+keywords : '' ,
+description : 'クレイツpresents TGC 北九州 2023' ,
+ogurl : '' ,
+path: '',
+ogimage : '' ,
+path : '' ,
+category : ['top'] ,
+pagename : '',
+css: [],
+js:[]
+};
+%> 
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="<%= pageinit.ogurl %>">
+
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js"></script>
+
+<meta name="description" content="<%= pageinit.description %>"/>
+<meta property="og:url" content="<%= pageinit.ogurl %>"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="<%= pageinit.ttl %>"/>
+<meta property="og:description" content="<%= pageinit.description %>"/>
+<meta property="og:site_name" content="<%= pageinit.ttl %>"/>
+<meta property="og:image" content="./img/zipangopera-ogp.jpg"/>
+
+<!-- favicon -->
+<link rel="icon" href="./img/favicons/favicon.ico" sizes="any"><!-- 32×32 -->
+<link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./img/favicons/apple-touch-icon.png"><!-- 180×180 -->
+<link rel="manifest" href="./img/favicons/manifest.webmanifest">
+
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<!-- swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+<!-- swiper -->
+<link rel="stylesheet" href="./assets/css/style.css">
+
+<!-- GA4 -->
+<!-- Google tag (gtag.js) --> 
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-6KV2YB8HQW"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-6KV2YB8HQW'); </script> -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TX9SWN8');</script>
+  <!-- End Google Tag Manager -->
+  
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SWN8"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  
+<title><%= pageinit.ttl %></title>
+
+</head>
+
+
+<body>
+
+<!-- < #%- include('./module/header'); %> -->
+
+<section class="fv">
+    <div class="sp">
+      <picture>
+        <source srcset="./img/img_fv0-sp.webp" type="image/webp">
+        <img src="./img/img_fv0-sp.jpg" width="1280" height="1496" alt="北九州TGC">
+      </picture>
+    </div>
+    <div class="pc">
+      <picture>
+        <source srcset="./img/img_fv0-pc2.webp" type="image/webp">
+        <img src="./img/img_fv0-pc2.jpg" width="3840" height="2091" alt="北九州TGC">
+      </picture>
+    </div>
+</section>
+<section class="fv02">
+    <picture>
+      <source srcset="./img/img_audition02.webp" type="image/webp">
+      <img src="./img/img_audition02.jpg" width="1920" height="1368" alt="オーディション募集">
+   </picture>
+</section>
+
+<main class="main">
+  <div class="blcin">
+
+    <picture>
+      <source srcset="./img/img_prize02.webp" type="image/webp" >
+      <img src="./img/img_prize02.jpg" width="1920" height="4240" alt="prize nd schedule">
+   </picture>
+   <div class="main__entry">
+    <a href="https://lin.ee/T1RmmNZ" target="_blank">
+      <picture>
+        <source srcset="./img/oubo03.webp" type="image/webp" >
+        <img src="./img/oubo03.png" width="1920" height="4240" alt="Entry">
+    </picture>
+    </a>
+    <p class="main__notice">株式会社コスモ、株式会社TWIN PLANET、協力：株式会社DONUTS</p>
+   </div>
+
+   <%- include('./module/about'); %>
+
+  </div>
+  <%- include('./module/mihi'); %>
+  <%- include('./module/concept'); %>
+
+  <%- include('./module/shohin'); %>
+
+</main>
+
+<%- include('./module/footer'); %>
+<script src="./assets/js/main.js"></script>
+<noscript>
+    <style>
+      .load-fade, .scroll-up {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0px);
+
+      }
+    </style>
+  </noscript>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+    
+
+  

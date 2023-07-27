@@ -1,0 +1,150 @@
+@use "./variable"as var;
+
+.footer{
+    background-color: var.$blk;
+    padding: 90px 0 45px;
+    margin: 0;
+    &__copy{
+        color: white;
+        margin: 0 auto;
+        text-align: center;
+        @include var.fz(10);
+    }
+    &__ttl{
+        @include var.bg;
+        width: 500px;
+        height: 23px;
+        margin: 0 auto;
+        background: url('../../img/cosmo.svg') no-repeat 0 0;
+    }
+
+    &__company{
+        display: flex;
+        padding: 60px 100px 80px;
+
+        justify-content: space-between;
+        &--cosmo{
+            &-c{
+                @include var.bg;
+                background: url('../../img/cosmologo-white.png') no-repeat 0 0;
+                width: 135px;
+                height: 85px;
+                margin: 0;
+                background-size: 100% auto;
+                &:hover{
+                    opacity: 0.7;
+                }
+            }
+        }
+        &--creatz{
+            &-c{
+                @include var.bg;
+                background: url('../../img/creats_wlogo.svg') no-repeat 0 0;
+                width: 135px;
+                height: 85px;
+                margin: 0;
+                background-size: 100% auto;
+                &:hover{
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+
+    &__sns{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 40px auto 34px;
+        padding: 0 16px;
+        li{
+            list-style-type: none;
+            a{
+                &:hover{
+                    opacity: 0.7;
+                }
+            }
+        }
+        &--tw{
+            @include var.bg();
+            width: 42px;
+            height: 42px;
+            background-position: 0 0;
+            background-image:url('../../img/icon_tw.svg');
+            background-repeat: no-repeat;
+
+        }
+        &--ins{
+            @include var.bg();
+            background-position: 0 0;
+            background-image:url('../../img/icon_insta.svg');
+            background-repeat: no-repeat;
+            width: 42px;
+            height: 42px;
+
+        }
+    }
+    //footer
+    @media screen and (max-width: var.$spbp) {
+        padding: 14vw 0 7vw;
+        width: 100%;
+        margin: 0;
+
+        &__ttl{
+                width: 78vw;
+            height: 3.6vw;
+            margin: 0 auto;
+            background: url('../../img/cosmo.svg') no-repeat 0 0;
+        }
+    
+        &__company{
+            display: flex;
+            padding: 9vw 15.6vw 5vw;
+    
+            &--cosmo{
+                &-c{
+                    width: 30vw;
+                    height: 19vw;
+                    &:hover{
+                        opacity: 1;
+                    }
+                }
+            }
+            &--creatz{
+                &-c{
+                    width: 30vw;
+                    height: 19vw;
+          
+                    &:hover{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    
+        &__sns{
+            margin: 5vw auto;
+            padding: 0 5vw;
+            li{
+                list-style-type: none;
+                a{
+                    &:hover{
+                        opacity: 1;
+                    }
+                }
+            }
+            &--tw{
+                width: 7vw;
+                height: 7vw;
+            }
+            &--ins{
+                width: 7vw;
+                height: 7vw;
+            }
+        }
+    }
+}
+// @include var.webpBg('.footer__anotherlogo', var.$imgpath+'another_logo', 'png');
+body{
+    padding: 0;
+}

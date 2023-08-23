@@ -11,9 +11,7 @@ $spbp: 768px;
 $pcbp: 560px;
 
 $imgpath : '../../img/';
-*{
-  box-sizing: border-box;
-}
+
 @mixin bg(){
     background-size: 100% auto;
     white-space: nowrap;
@@ -56,4 +54,3 @@ $noWebpClassName: '.is-no-webp';
     background-image: url(#{$imgpath}.webp);
   }
 }
-

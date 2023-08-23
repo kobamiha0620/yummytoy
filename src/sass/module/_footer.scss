@@ -1,150 +1,319 @@
 @use "./variable"as var;
 
-.footer{
-    background-color: var.$blk;
-    padding: 90px 0 45px;
-    margin: 0;
-    &__copy{
-        color: white;
-        margin: 0 auto;
+
+// main {
+//     width: 960px;
+//     background-color: #F9BF22;
+//     margin: 0 auto;
+//     padding: 0;
+//     @media screen and (max-width: var.$spbp) {
+//         width: 100%;
+//         padding: 0 16px;
+//     }
+
+// }
+
+
+.yamimain {
+    width: 100%;
+    font-size: 0;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    a {
+        white-space: nowrap;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    &__blc {
+        margin: 50px auto 50px;
+
+        img {
+            border-radius: 20px;
+        }
+        &--small{
+            margin:  0 0 30px;
+            border: solid 2px #E60037;
+            padding: 40px;
+            background-color: #FFF;
+        }
+        &--ttl{
+            text-align: center;
+            @include var.fz(24);
+            line-height: 1.4;
+            margin: 0 auto 20px;
+            span{
+                color: #E60037;
+                display: inline-block;
+                padding: 0 10px;
+            }
+        }
+        &--txt{
+            @include var.fz(16);
+            line-height: 1.6;
+            text-align: center;
+            margin: 20px auto;
+            span{
+                color: #E60037;
+                display: inline-block;
+                margin: 0 10px;
+            }
+      
+        }
+        &--txt2{
+            @include var.fz(26);
+            line-height: 1;
+            margin: 20px auto;
+
+            .YummisToy{
+                width: 100px;
+                height: 36px;
+                cursor: pointer;
+
+                position: relative;
+                font-size: 0;
+                transition: transform .7s;
+                display: inline-block;
+                margin: 0 6px;
+                img{
+                    height: auto;
+                    left: 0;
+                    position: absolute;
+                    width: 100%;
+                    border-radius: 0;
+                }
+                img:last-of-type {
+                    opacity: 0;
+                    transition: opacity .7s;
+                  }
+
+            }
+            a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &:hover{
+                    .YummisToy{
+                        img{
+                            opacity: 1;
+
+                        }
+                    }
+                }
+
+            }
+        }
+        @media screen and (max-width: var.$spbp) {
+        width: calc(100% - 32px);
+        &--small{
+            margin:  0 0 20px;
+            padding: 20px;
+        }
+        &--ttl{
+            text-align: center;
+            @include var.fz(22);
+            line-height: 1.4;
+            margin: 0 auto 20px;
+            br{
+                display: none;
+            }
+        }
+        &--txt{
+            @include var.fz(14);
+            line-height: 1.6;
+            text-align: left;
+
+        }
+        &--txt2{
+            @include var.fz(18);
+            margin: 16px auto;
+
+            .YummisToy{
+                width: 86px;
+                height: 31px;
+                margin: 0 6px;
+
+
+            }
+           
+        }
+        img {
+            border-radius: 8px;
+        }
+        }
+        
+    }
+
+    &__about {
+        font-weight: bold;
+        color: #FFF;
+        background: #F54335;
+        @include var.fz(24);
+        text-decoration: none;
+        padding: 10px 50px;
+        border-radius: 10px;
         text-align: center;
-        @include var.fz(10);
+        margin: 0 auto 40px;
+        display: block;
+        width: 50%;
+    }
+
+
+
+}
+
+//footer
+.boxRight .dn {
+    display: none !important;
+}
+
+.yamifooter {
+    margin: 100px auto 0;
+    padding: 158px 0 0;
+    &__inner{
+        max-width: 640px;
+        margin: 0 auto;
     }
     &__ttl{
-        @include var.bg;
-        width: 500px;
-        height: 23px;
-        margin: 0 auto;
-        background: url('../../img/cosmo.svg') no-repeat 0 0;
+        background: url('https://basefile.akamaized.net/yammystoy-base-ec/64e479cd0f66d/footer_followus.png') no-repeat 0 0;
+        display: block;
+        width: 292px;
+        height: 37px;
+        background-size: 100% auto;
+        white-space: nowrap;
+        text-indent: -9999px;
+        margin: 0 auto 92px;
+        font-size: 0;
     }
+    a {
+        margin: 0 12px;
+        background-repeat: no-repeat;
+        width: 62px;
+        height: 62px;
+        background-size: 100% auto;
+        white-space: nowrap;
+        text-indent: -9999px;
+        display: block;
+        &:hover{
+            background-size: 100% auto;
 
-    &__company{
+        }
+    }
+    &__subttl01{
+        white-space: nowrap;
+        text-indent: -9999px;
+        background: url('https://basefile.akamaized.net/yammystoy-base-ec/64e585a1e85fe/footer_yammy01pc.png') no-repeat 0 0;
+        background-size: 100% auto;
+        width: 640px;
+        height: 19px;
+        margin: 0 auto 26px;
+    }
+    &__subttl02{
+        white-space: nowrap;
+        text-indent: -9999px;
+        background: url('https://basefile.akamaized.net/yammystoy-base-ec/64e58644e272b/footer_yammy02pc.png') no-repeat 0 0;
+        background-size: 100% auto;
+        width: 640px;
+        height: 19px;
+        margin: 0 auto 26px;
+    }
+    &__snsblc{
         display: flex;
-        padding: 60px 100px 80px;
-
-        justify-content: space-between;
-        &--cosmo{
-            &-c{
-                @include var.bg;
-                background: url('../../img/cosmologo-white.png') no-repeat 0 0;
-                width: 135px;
-                height: 85px;
-                margin: 0;
-                background-size: 100% auto;
-                &:hover{
-                    opacity: 0.7;
-                }
-            }
+        justify-content: center;
+        margin: 0 auto 65px;
+        a{
+            margin: 0 9px;
         }
-        &--creatz{
-            &-c{
-                @include var.bg;
-                background: url('../../img/creats_wlogo.svg') no-repeat 0 0;
-                width: 135px;
-                height: 85px;
-                margin: 0;
-                background-size: 100% auto;
-                &:hover{
-                    opacity: 0.7;
-                }
-            }
+    }
+    &__twitter {
+        background: url('https://basefile.akamaized.net/yammystoy-base-ec/64e485de9f1bd/icon_tw.png');
+        &:hover{
+            background: url('https://basefile.akamaized.net/yammystoy-base-ec/64e4861c71af6/icon_tw-b.png');
         }
     }
 
-    &__sns{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 40px auto 34px;
-        padding: 0 16px;
-        li{
-            list-style-type: none;
-            a{
-                &:hover{
-                    opacity: 0.7;
-                }
-            }
-        }
-        &--tw{
-            @include var.bg();
-            width: 42px;
-            height: 42px;
-            background-position: 0 0;
-            background-image:url('../../img/icon_tw.svg');
-            background-repeat: no-repeat;
-
-        }
-        &--ins{
-            @include var.bg();
-            background-position: 0 0;
-            background-image:url('../../img/icon_insta.svg');
-            background-repeat: no-repeat;
-            width: 42px;
-            height: 42px;
-
+    &__tiktok {
+        background: url('https://basefile.akamaized.net/yammystoy-base-ec/64e485fd6f603/icon_tiktok.png');
+        &:hover{
+            background: url('https://basefile.akamaized.net/yammystoy-base-ec/64e4866fa3c0f/icon_tiktok-b.png');
         }
     }
-    //footer
+
+    &__youtube {
+        background: url('https://basefile.akamaized.net/yammystoy-base-ec/64e485ec1faee/icon_youtube.png');
+        &:hover{
+            background: url('https://basefile.akamaized.net/yammystoy-base-ec/64e486543e838/icon_youtube-b.png');
+        }
+    }
+
+    &__insta {
+        background: url('https://basefile.akamaized.net/yammystoy-base-ec/64e4860d07d9f/icon_inst.png');
+        &:hover{
+            background: url('https://basefile.akamaized.net/yammystoy-base-ec/64e486379979f/icon_inst-b.png');
+        }
+    }
+
     @media screen and (max-width: var.$spbp) {
-        padding: 14vw 0 7vw;
-        width: 100%;
-        margin: 0;
-
-        &__ttl{
-                width: 78vw;
-            height: 3.6vw;
+        padding: 14vw 0 0;
+        &__inner{
+            max-width: 100%;
             margin: 0 auto;
-            background: url('../../img/cosmo.svg') no-repeat 0 0;
         }
+        &__ttl{
+            width: 39vw;
+            height: 5vw;
+            margin: 0 auto 11.7vw;
+            font-size: 0;
+        }
+        a {
+            margin: 0 1.5vw;
+            background-repeat: no-repeat;
+            width: 10vw;
+            height: 10vw;
+            background-size: 100% auto;
+            white-space: nowrap;
+            text-indent: -9999px;
+            display: block;
+            &:hover{
+                background-size: 100% auto;
     
-        &__company{
-            display: flex;
-            padding: 9vw 15.6vw 5vw;
-    
-            &--cosmo{
-                &-c{
-                    width: 30vw;
-                    height: 19vw;
-                    &:hover{
-                        opacity: 1;
-                    }
-                }
-            }
-            &--creatz{
-                &-c{
-                    width: 30vw;
-                    height: 19vw;
-          
-                    &:hover{
-                        opacity: 1;
-                    }
-                }
             }
         }
-    
-        &__sns{
-            margin: 5vw auto;
-            padding: 0 5vw;
-            li{
-                list-style-type: none;
-                a{
-                    &:hover{
-                        opacity: 1;
-                    }
-                }
-            }
-            &--tw{
-                width: 7vw;
-                height: 7vw;
-            }
-            &--ins{
-                width: 7vw;
-                height: 7vw;
+        &__subttl01{
+            white-space: nowrap;
+            text-indent: -9999px;
+            background: url('https://basefile.akamaized.net/yammystoy-base-ec/64e58cd564043/footer_yammy01sp.png') no-repeat 0 0;
+            background-size: 100% auto;
+            width: 50vw;
+            height: 7.5vw;
+            margin: 0 auto 3.5vw;
+        }
+        &__subttl02{
+            white-space: nowrap;
+            text-indent: -9999px;
+            background: url('https://basefile.akamaized.net/yammystoy-base-ec/64e58cda6008e/footer_yammy02sp.png') no-repeat 0 0;
+            background-size: 100% auto;
+            width: 50vw;
+            height: 7.5vw;
+            margin: 0 auto 3.5vw;
+        }
+        &__snsblc{
+
+            margin: 0 auto 12vw;
+            a{
+                margin: 0 1.5vw;
             }
         }
     }
 }
-// @include var.webpBg('.footer__anotherlogo', var.$imgpath+'another_logo', 'png');
-body{
-    padding: 0;
+
+#baseMenu{
+    .base{
+        display: none;
+    }
 }
